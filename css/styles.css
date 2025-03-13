@@ -1,0 +1,112 @@
+@import url(./reset.css);
+@import url(./fonts.css);
+
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('../images/bg-intro-mobile.png');
+  background-position: center;
+  background-color: var(--red);
+}
+
+main {
+  min-height: inherit;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  min-height: inherit;
+}
+
+.hero {
+  color: white;
+  text-align: center;
+}
+
+.hero-title {
+  margin-top: 2rem;
+  margin-bottom: .8em;
+  font-size: 32px;
+  line-height: 1.1;
+}
+
+/* free trial banner */
+
+.free-trial {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  color: white;
+  background-color: var(--blue);
+  padding: 1.2em 2em;
+  border-radius: .5rem;
+  box-shadow: 0px 10px 0px -2px rgba(0, 0, 0, 0.233);
+  text-align: center;
+
+  & p {
+    margin: 0 auto;
+    width: 20ch;
+    font-size: 16px;
+  }
+}
+
+.text-accent {
+  font-weight: 700;
+}
+
+/* Subscribe form */
+.form {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1.5em;
+}
+
+.input-field {
+  max-width: 100%;
+  width: 100%;
+  padding: 1em 1.5em;
+  border-radius: .5rem;
+  border: 1px solid hsla(0, 0%, 50%, 0.411);
+  margin-bottom: min(1em);
+}
+
+.btn-submit {
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 1.2em;
+  border-radius: .5rem;
+  background-color: var(--green);
+  box-shadow: 5px -28px 0px -23px hsl(154, 57%, 38%) inset;
+}
+
+.terms-services {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--grayish-blue);
+  margin-top: 2em;
+  text-align: center;
+
+  & .text-accent {
+    color: var(--red);
+  }
+}
