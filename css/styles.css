@@ -7,6 +7,10 @@
   --blue: hsl(248, 32%, 49%);
   --dark-blue: hsl(249, 10%, 26%);
   --grayish-blue: hsl(246, 25%, 77%);
+
+  --fs-sm: clamp(0.8125rem, 0.7566105769230769rem + 0.2884615384615385vw, 1rem);
+  --fs-mid: clamp(0.875rem, 0.8004807692307693rem + 0.38461538461538464vw, 1.125rem);
+  --fs-lg: clamp(2rem, 1.4411057692307692rem + 2.8846153846153846vw, 3.875rem);
 }
 
 body {
@@ -42,7 +46,7 @@ main {
 .hero-title {
   margin-top: 2rem;
   margin-bottom: .8em;
-  font-size: 32px;
+  font-size: var(--fs-lg);
   line-height: 1.1;
 }
 
@@ -50,8 +54,7 @@ main {
 
 .free-trial {
   cursor: pointer;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin-block: 2rem;
   color: white;
   background-color: var(--blue);
   padding: 1.2em 2em;
@@ -62,7 +65,7 @@ main {
   & p {
     margin: 0 auto;
     width: 20ch;
-    font-size: 16px;
+    font-size: var(--fs-sm);
   }
 }
 
@@ -86,9 +89,11 @@ main {
 .input-field {
   max-width: 100%;
   width: 100%;
+  font-weight: 700;
   padding: 1em 1.5em;
   border-radius: .5rem;
   border: 1px solid hsla(0, 0%, 50%, 0.411);
+  font-size: var(--fs-sm);
 }
 
 .input-field.error {
@@ -97,7 +102,6 @@ main {
 
 .btn-submit {
   color: white;
-  cursor: pointer;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -108,15 +112,17 @@ main {
   border-radius: .5rem;
   background-color: var(--green);
   box-shadow: 5px -28px 0px -23px hsl(154, 57%, 38%) inset;
+  font-size: var(--fs-sm);
 
   &:hover {
+    cursor: pointer;
     opacity: .7;
   }
 }
 
 .terms-services {
   display: block;
-  font-size: 12px;
+  font-size: .75rem;
   color: var(--grayish-blue);
   margin-top: 2em;
   text-align: center;
@@ -128,7 +134,7 @@ main {
 
 .error-message {
   color: var(--red);
-  font-size: 12px;
+  font-size: 0.75rem;
   font-style: italic;
   position: absolute;
   right: 0;
@@ -155,13 +161,12 @@ main {
   }
 
   .hero-title {
-    font-size: 62px;
     letter-spacing: 3px;
     margin-bottom: .5rem;
   }
 
   .hero-paragraph {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 
   .form {

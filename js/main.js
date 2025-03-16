@@ -25,4 +25,14 @@ let showErrorMessage = (text, el) => {
   el.classList.add('error');
   el.insertAdjacentElement('afterend', $errorMessage);
   el.insertAdjacentElement('beforebegin', $errorIcon);
+
+  setTimeout(() => {
+    el.classList.remove('error');
+    $errorIcon.classList.remove('error-icon');
+    $errorMessage.classList.remove('error-message');
+
+    $errorMessage.remove();
+    $errorIcon.remove();
+  }, 5000);
+
 }
